@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar color="primary" class="animated fadeIn">
+    <ion-buttons slot="start">
+      <ion-menu-button color="white"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-text color="light">
+        <ion-text color="white" class="fw700">Home </ion-text>
+      </ion-text>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <!-- <div *ngFor="let data of flour_type">
+  <ion-card>
+         <ion-item>
+          <img  src="{{data.full_image_path}}" >
+            <p style="color:black"><b>
+              {{ data.name}}
+            </b></p> 
+            <ion-button  (click)="view(data.id)">View</ion-button> 
+         </ion-item>
+          </ion-card>
+  </div> -->
+
+
+  <div padding-top padding-horizontal>
+  </div>
+  <div class="abc"  *ngFor="let data of flour_type">
+    <ion-grid class="is-product-tiles">
+      <ion-row>
+        <ion-col col-6 no-padding>
+            <ion-card>
+          <img  src="{{data.full_image_path}}" class="center">
+          <ion-card-content>
+            <p style="float:left; color:black"><b>
+              {{ data.name}}
+            </b></p>
+            <ion-button style="float:right; margin-bottom: 15px;" (click)="view(data.id)">View</ion-button>
+          </ion-card-content>
+        
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>
+
+<ion-footer class="animated fadeIn">
+  <ion-toolbar color="primary">
+    <ion-grid no-padding>
+        <ion-row>
+          <ion-col size="6" no-padding>
+            <ion-button size="small" shape="round" expand="full" fill="clear" color="tertiary" routerLink="/home">
+              <ion-icon slot="start" name="home"></ion-icon>
+             Home
+            </ion-button>
+          </ion-col>
+          <ion-col size="6" no-padding>
+            <ion-button size="small" shape="round" expand="full" fill="clear" color="tertiary" routerLink="/cart">
+              <ion-icon slot="start" name="cart"></ion-icon>
+           Cart
+            </ion-button>
+          </ion-col>
+          <!-- <ion-col size="4" no-padding>
+            <ion-button size="small" shape="round" expand="full" fill="clear" color="light" (click)="settings()">
+              <ion-icon slot="start" name="cog"></ion-icon>
+              {{ 'app.pages.menu.settings' | translate }}
+            </ion-button>
+          </ion-col> -->
+        </ion-row>
+    </ion-grid> 
+   </ion-toolbar>
+</ion-footer> 

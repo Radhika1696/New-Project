@@ -1,0 +1,196 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Order Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+ <!-- <ion-header>
+  <ion-segment [(ngModel)]='currentTab' (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="official">
+      <ion-label>Summary</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="personal">
+      <ion-label>Items</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content padding>
+  <div [ngSwitch]="currentTab">
+    <div *ngSwitchCase="'personal'">
+      <div class="pqr">
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="assets/img/gehu.png" class="center">
+          </ion-thumbnail>
+          <ion-label>
+            <h3> Grain Flour&nbsp;&nbsp; </h3>
+            <h3> 1kg&nbsp;&nbsp;</h3>
+            <ion-row>
+              <ion-col>
+                <h3> Rs.150/-&nbsp;&nbsp;</h3>
+              </ion-col>
+              <ion-col>
+                <h3> Quantity:1&nbsp;&nbsp;</h3>
+              </ion-col>
+            </ion-row>
+          </ion-label>
+        </ion-item>
+      </div>
+    </div>
+
+    <div *ngSwitchCase="'official'">
+      <h3>Delivery Slot</h3>
+      <div class="pqr">
+        <ion-item>
+          <ion-label>
+            <h3>Date&nbsp;:&nbsp;</h3>
+            <h3> Time&nbsp;:&nbsp; </h3>
+            <h3>Order Status&nbsp;:&nbsp; </h3>
+          </ion-label>
+        </ion-item>
+      </div>
+
+      <h3>Address</h3>
+      <div class="pqr">
+        <ion-item>
+          <ion-label>
+            <h3>Radhika Rohane&nbsp;&nbsp;</h3>
+            <h3> Rahul Complex, Off No 40/41, D-Wing, 4th Floor, Behind Poona Bakery, Paud Rd, Kothrud, Pune,
+              Maharashtra 38&nbsp;&nbsp; </h3>
+            <h3>
+              <ion-icon name="call"></ion-icon>Mobile No&nbsp;:&nbsp;
+            </h3>
+          </ion-label>
+        </ion-item>
+      </div>
+
+      <h3>Payment Details</h3>
+      <div class="pqr">
+        <ion-item>
+          <ion-label>
+            <h3>Order No&nbsp;:&nbsp;</h3>
+            <h3>Payment Options&nbsp;:&nbsp; </h3>
+            <h3>Order Items&nbsp;:&nbsp; </h3>
+            <h3>Total&nbsp;:&nbsp; </h3>
+          </ion-label>
+        </ion-item>
+      </div>
+    </div>
+  </div> -->
+  <ion-content class="animated-fading">
+    <ion-segment scrollable [(ngModel)]="hotelSegment" color="primary">
+      <ion-segment-button checked value="0">
+        <ion-label>Summary</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="1">
+        <ion-label>Items</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  
+    <ion-slides>
+      <ion-slide class="slide-1">
+        <!-- <ion-grid>
+          <ion-row>
+            <ion-col size="12" margin-bottom>
+              <hr>
+              <ion-list> -->
+                <!-- <ion-item *ngFor="let pendingitem of PendingList; let i = index">
+                  <ion-label>
+                    <h2>
+                      <ion-text color="primary">Activity {{pendingitem.activity_name}}</ion-text>
+                    </h2>
+                    <p>Activity Date : {{pendingitem.start_date}} to {{pendingitem.end_date}}</p>
+                    <p>Customer Name : {{pendingitem.customer_name}}</p>
+                    <p>Customer Email : {{pendingitem.customer_email}}</p>
+                    <p>Customer Phone : {{pendingitem.customer_phone}}</p>
+                  </ion-label>
+                </ion-item> -->
+              <!-- </ion-list>
+            </ion-col>
+          </ion-row>
+        </ion-grid> -->
+     
+  
+  <ion-grid>
+    <ion-col size="12" margin-bottom>
+      <ion-list>
+    
+     
+        <h3>Delivery Slot</h3>
+        <div class="pqr">
+          <ion-item>
+            <ion-label>
+              <h3>Date&nbsp;:&nbsp;{{summary_details?.order_date}}</h3>
+              <!-- <h3> Time&nbsp;:&nbsp; </h3> -->
+              <h3>Order Status&nbsp;:{{summary_details?.order_status}}&nbsp; </h3>
+            </ion-label>
+          </ion-item>
+        </div>
+  
+        <h3>Address</h3>
+        <div class="pqr">
+          <ion-item>
+            <ion-label>
+              <!-- <h3>Radhika Rohane&nbsp;&nbsp;</h3> -->
+              <h3> {{summary_details?.address}} </h3>
+              <h3>
+                Mobile No
+              </h3>
+            </ion-label>
+          </ion-item>
+        </div>
+  
+        <h3>Payment Details</h3>
+        <div class="pqr">
+          <ion-item>
+            <ion-label>
+              <h3>Order No&nbsp;:&nbsp;</h3>
+              <h3>Payment Options&nbsp;:&nbsp; </h3>
+              <h3>Order Items&nbsp;:&nbsp;{{summary_details?.item_count}} </h3>
+              <h3>Total&nbsp;:&nbsp; </h3>
+            </ion-label>
+          </ion-item>
+        </div>
+      
+      </ion-list>
+    </ion-col>
+</ion-grid>
+      </ion-slide>
+  
+      <ion-slide class="slide-2">
+        <ion-grid>
+        
+            <ion-col size="12" margin-bottom>
+              <ion-list>
+                <div *ngFor="let data of item_details">
+                  <ion-item>
+                    <ion-thumbnail slot="start">
+                      <img src="{{data.full_image_path}}" class="center">
+                    </ion-thumbnail>
+                    <ion-label>
+                      <h3> {{data.name}}&nbsp;&nbsp; </h3>
+                      <h3> {{data.quantity}}kg&nbsp;&nbsp;</h3>
+                      <ion-row>
+                        <ion-col>
+                          <h3> Price:{{data.price}}&nbsp;&nbsp;</h3>
+                        </ion-col>
+                        <!-- <ion-col>
+                          <h3> Quantity:1&nbsp;&nbsp;</h3>
+                        </ion-col> -->
+                      </ion-row>
+                    </ion-label>
+                  </ion-item>
+                </div>
+              </ion-list>
+            </ion-col>
+        
+        </ion-grid>
+      </ion-slide>
+     
+    </ion-slides>
+</ion-content> 
+

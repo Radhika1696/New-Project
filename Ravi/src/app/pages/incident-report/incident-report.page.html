@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Confirmation</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="onRegisterForm" class="list-form">
+
+    <ion-item no-padding>
+      <ion-label position="floating" color="primary">
+        <!-- <ion-icon name="mail" item-start></ion-icon> -->
+        Email
+      </ion-label>
+      <ion-input color="primary" type="text" formControlName="email"></ion-input>
+    </ion-item>
+    <p ion-text class="text08"
+      *ngIf="onRegisterForm.get('email').touched && onRegisterForm.get('email').hasError('required')">
+      <ion-text color="danger">
+        otp is required
+      </ion-text>
+    </p>
+
+    <ion-item no-padding>
+      <ion-label position="floating" color="primary">
+        <!-- <ion-icon name="mail" item-start></ion-icon> -->
+        Confirm Email OTP
+      </ion-label>
+      <ion-input color="primary" type="text" formControlName="otp"></ion-input>
+    </ion-item>
+    <p ion-text class="text08"
+      *ngIf="onRegisterForm.get('otp').touched && onRegisterForm.get('otp').hasError('required')">
+      <ion-text color="danger">
+        otp is required
+      </ion-text>
+    </p>
+  </form>
+
+
+
+  <div margin-top style="text-align: center">
+    <ion-button icon-left class="center" size="medium" expand="small" shape="round" color="dark" (click)="add()"
+      [disabled]="!onRegisterForm.valid" tappable>
+      <ion-icon name="log-in"></ion-icon>
+      Submit
+    </ion-button>
+
+
+  </div>
+
+
+</ion-content>

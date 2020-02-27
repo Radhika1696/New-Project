@@ -1,0 +1,73 @@
+ <ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'Service Provider Detail' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header> 
+
+<!-- <ion-content>
+    <img  src="{{service_list_detail?.image}}" class="center">
+    <ion-badge color="orange" item-center></ion-badge> 
+<h3>  <ion-icon name="person" ></ion-icon> <strong>Name:{{service_list_detail?.name}}</strong> </h3>
+<h3>  <ion-icon name="md-list" ></ion-icon> <strong>Category:{{service_list_detail?.service_category_name}}</strong></h3>
+<h3>  <ion-icon name="call" ></ion-icon> <strong>Contact:{{service_list_detail?.mobile}}</strong></h3>
+<h3>  <ion-icon name="home" ></ion-icon> <strong>Address:{{service_list_detail?.address}}</strong></h3>
+</ion-content> -->
+
+
+<ion-content class="profile">
+ 
+  
+        <img  src="{{service_list_detail?.image}}" class="center"><br>
+
+  
+    <ion-grid fixed no-padding>
+      <ion-row>
+        <ion-col >
+
+            <ion-item>
+              <ion-label >
+                <h3><strong> Name</strong>&nbsp;:&nbsp;{{service_list_detail?.name}}</h3><br>
+                <h3> <strong>Category</strong>&nbsp;:&nbsp;{{service_list_detail?.service_category_name}}</h3><br>
+                <h3> <strong> Gender</strong>&nbsp;:&nbsp;{{service_list_detail?.gender}}</h3><br>
+          <h3> <strong> Contact</strong>&nbsp;:&nbsp;{{service_list_detail?.mobile}}</h3><br>
+          <h3>  <strong>  Address</strong>&nbsp;:&nbsp;{{service_list_detail?.address}}</h3><br>
+              </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+              <!-- <ion-input inputmode="text" ></ion-input> -->
+          
+     
+      
+
+              <!-- <ion-input inputmode="text"></ion-input> -->
+          
+<!-- 
+            <ion-item>
+              <ion-label >Email:{{owner_profile?.email}}</ion-label>
+              <ion-input inputmode="email" ></ion-input>
+            </ion-item> -->
+
+         
+
+         
+              <!-- <ion-input inputmode="text"></ion-input> -->
+       
+
+            <!-- <ion-item>     
+              <ion-label >PAN No.:{{owner_profile?.pan_no}}</ion-label>
+              <ion-input inputmode="number" ></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label >Adhar No.:{{owner_profile?.adhar_no}}</ion-label>
+              <ion-input inputmode="number"></ion-input>
+            </ion-item> -->
+
+    
+

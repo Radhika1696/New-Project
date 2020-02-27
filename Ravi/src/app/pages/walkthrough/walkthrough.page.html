@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Approval Guests List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="abc" *ngFor="let visitors of Guest_List">
+
+    <ion-item>
+      <ion-label >
+        <h3><strong>Visitor Name</strong>&nbsp;:&nbsp;{{visitors.visitor_name}}</h3>
+        <h3> <strong>Person to Meet</strong>&nbsp;:&nbsp;{{visitors.person_to_meet}} </h3>
+        <h3><strong>Purpose of Visit</strong>&nbsp;:&nbsp;{{visitors.purpose_of_visit}} </h3>
+          <h3> <strong>Mobile No. </strong>&nbsp;:&nbsp;{{visitors.mobile}}</h3>
+          <h3> <strong>Date</strong>&nbsp;:&nbsp;{{visitors.visit_date}}</h3>
+          <h3> <strong>Arrival Time</strong>&nbsp;:&nbsp;{{visitors.visit_time}}</h3>
+          <ion-button color="success" (click)="confirm(visitors)" shape="round">Confirm</ion-button>
+        <ion-button color="danger" (click)="reject(visitors)" shape="round">Reject</ion-button>
+        </ion-label>
+    
+      </ion-item>
+    </div> 
+
+</ion-content> 
+

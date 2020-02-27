@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>{{ 'Events' | translate }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+
+  <ion-content>
+    <div class="pqr" *ngFor="let event of events_List">
+      <ion-item >
+          <ion-thumbnail slot="start">
+              <img src="assets/img/events.png" class="center">
+            </ion-thumbnail> 
+        <ion-label >
+       <h3> <strong>{{event.event_name}}</strong></h3>
+          <h3>{{event.event_date}} </h3>
+          <h3 >  {{event.description}}</h3> 
+            <!-- <div  style="text-align: center">  -->
+           
+                    <ion-button (click)="detail(event)" shape="round" >Read more</ion-button>  
+                     
+            <!-- </div>  -->
+           </ion-label>
+        </ion-item>
+
+
+      </div>
+  </ion-content>
+  
+

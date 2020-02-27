@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Recurring Services List</ion-title>
+      <ion-buttons slot="end" class="btn1" (click)="add()">
+          <ion-icon name="md-add-circle"></ion-icon>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content> 
+  
+    <div class="pqr" *ngFor="let service of re_service_list">
+   
+        
+        <ion-item>
+          <ion-buttons slot="end" class="btn" (click)="edit(service)">
+            <ion-icon name="md-remove-circle"></ion-icon>  
+          </ion-buttons>
+  
+          <ion-buttons slot="end"  class="btn2" (click)="delete(service)">
+            <ion-icon name="md-trash"></ion-icon>  
+          </ion-buttons>
+  
+  
+           <ion-label >
+            <h3><strong>Service Provider Name</strong>&nbsp;:&nbsp;{{service.provider_name}}</h3>
+            <h3> <strong>Service Name</strong>&nbsp;:&nbsp;{{service.service_name}}</h3>
+            <h3><strong>Service Type</strong>&nbsp;:&nbsp;{{service.service_type}}</h3>
+            <h3> <strong>Service Frequency</strong>&nbsp;:&nbsp;{{service.service_frequency}} </h3>
+            <h3> <strong>Mobile</strong>&nbsp;:&nbsp;{{service.mobile}}</h3>
+            <h3> <strong>Address</strong>&nbsp;:&nbsp;{{service.address}}</h3>
+            <h3><strong>Time</strong>&nbsp;:&nbsp;{{service.service_time}}</h3>
+            
+            </ion-label> 
+         
+          </ion-item>
+        </div>
+  
+  
+      </ion-content>
+  
+  

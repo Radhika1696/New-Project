@@ -1,0 +1,93 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Add Vehicles</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content> 
+
+      <form [formGroup]="onRegisterForm" class="list-form">
+       <ion-grid class="is-product-tiles">
+         <ion-row>
+           <ion-col size="12" no-padding>
+             <ion-item no-padding class="animated fadeInUp">
+               <ion-label  position="floating">
+                  <ion-icon name="car" ></ion-icon>
+         Vehicle Name:
+               </ion-label>
+               <ion-input color="black" type="text" formControlName="vehicle_name"></ion-input>
+             </ion-item>
+             <p ion-text class="text08"
+               *ngIf="onRegisterForm.get('vehicle_name').touched && onRegisterForm.get('vehicle_name').hasError('required')">
+               <ion-text color="danger">
+                 field is required
+               </ion-text>
+             </p>
+           </ion-col>
+
+           <ion-col size="12" no-padding>
+              <ion-item no-padding class="animated fadeInUp">
+                <ion-label  position="floating">
+                   <ion-icon name="car" ></ion-icon>
+               Vehicle Type:
+                </ion-label>
+                <ion-input color="black" type="text" formControlName="vehicle_type"></ion-input>
+              </ion-item>
+              <p ion-text class="text08"
+                *ngIf="onRegisterForm.get('vehicle_type').touched && onRegisterForm.get('vehicle_type').hasError('required')">
+                <ion-text color="danger">
+                  field is required
+                </ion-text>
+              </p>
+            </ion-col>
+
+            <ion-col size="12" no-padding>
+                <ion-item no-padding class="animated fadeInUp">
+                  <ion-label  position="floating">
+                     <ion-icon name="car" ></ion-icon>
+                 Vehicle no.:
+                  </ion-label>
+                  <ion-input color="black" type="text" formControlName="vehicle_no"></ion-input>
+                </ion-item>
+                <p ion-text class="text08"
+                  *ngIf="onRegisterForm.get('vehicle_no').touched && onRegisterForm.get('vehicle_no').hasError('required')">
+                  <ion-text color="danger">
+                    field is required
+                  </ion-text>
+                </p>
+           </ion-col>
+
+          <!-- <ion-col size="12" no-padding>
+                  <ion-item no-padding class="animated fadeInUp">
+                    <ion-label position="floating">
+                      <ion-icon name="call" item-start></ion-icon>
+                    Contact:
+                    </ion-label>
+                    <ion-input color="black" type="number" formControlName="mobile" maxlength="10"></ion-input>
+                  </ion-item>
+                  <span ion-text class="text08"
+                    *ngIf="onRegisterForm.get('mobile').errors && (onRegisterForm.get('mobile').touched || onRegisterForm.get('mobile').dirty)">
+                   <span *ngIf="onRegisterForm.get('mobile').errors.required">
+                  <ion-text style="color: red">mobile number is required</ion-text>
+                   </span>
+                <div *ngIf="onRegisterForm.get('mobile').hasError('pattern')">
+                  <ion-text style="color: red"> It is not a valid mobile number</ion-text>
+                </div>
+              </span>
+         </ion-col> -->
+        
+          </ion-row>
+       </ion-grid>
+     </form>
+     
+     <div margin-top style="text-align:center">
+       <ion-button icon-left size="medium" expand="half" shape="round" (click)="add()"  tappable>
+         Add
+       </ion-button>
+     </div> 
+    </ion-content>
+    
+    

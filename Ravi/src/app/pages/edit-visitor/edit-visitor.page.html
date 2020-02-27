@@ -1,0 +1,157 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Edit Visitors List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="animated fadeIn"> 
+    <form [formGroup]="onRegisterForm" class="list-form">
+     <ion-grid class="is-product-tiles">
+       <ion-row>
+         <ion-col size="12" no-padding>
+           <ion-item no-padding class="animated fadeInUp">
+             <ion-label  position="floating">
+               <ion-icon name="person" item-start></ion-icon>
+              Visitor Name:
+             </ion-label>
+             <ion-input color="black" type="text" formControlName="visitor_name"></ion-input>
+           </ion-item>
+           <p ion-text class="text08"
+             *ngIf="onRegisterForm.get('visitor_name').touched && onRegisterForm.get('visitor_name').hasError('required')">
+             <ion-text color="danger">
+               field is required
+             </ion-text>
+           </p>
+         </ion-col>
+
+         <ion-col size="12" no-padding>
+            <ion-item no-padding class="animated fadeInUp">
+              <ion-label position="floating">
+                <ion-icon name="person" item-start></ion-icon>
+                Person to meet:
+              </ion-label>
+              <ion-input color="black" type="text" formControlName="person_to_meet"></ion-input>
+            </ion-item>
+            <p ion-text class="text08"
+              *ngIf="onRegisterForm.get('person_to_meet').touched && onRegisterForm.get('person_to_meet').hasError('required')">
+              <ion-text color="danger">
+                field is required
+              </ion-text>
+            </p>
+          </ion-col>
+
+          <ion-col size="12" no-padding>
+            <ion-item no-padding class="animated fadeInUp">
+              <ion-label  position="floating">
+                <ion-icon name="person" item-start></ion-icon>
+              Purpose of Visit:
+              </ion-label>
+              <ion-input color="black" type="text" formControlName="purpose_of_visit"></ion-input>
+            </ion-item>
+            <p ion-text class="text08"
+              *ngIf="onRegisterForm.get('purpose_of_visit').touched && onRegisterForm.get('purpose_of_visit').hasError('required')">
+              <ion-text color="danger">
+                field is required
+              </ion-text>
+            </p>
+          </ion-col>
+   
+         <ion-col size="12" no-padding>
+           <ion-item no-padding class="animated fadeInUp">
+             <ion-label position="floating">
+               <ion-icon name="call" item-start></ion-icon>
+               Mobile No.:
+             </ion-label>
+             <ion-input color="black" type="number" formControlName="mobile" maxlength="10"></ion-input>
+           </ion-item>
+           <span ion-text class="text08"
+            *ngIf="onRegisterForm.get('mobile').errors && (onRegisterForm.get('mobile').touched || onRegisterForm.get('mobile').dirty)">
+            <span *ngIf="onRegisterForm.get('mobile').errors.required">
+              <ion-text style="color: red">contact number is required</ion-text>
+            </span>
+            <div *ngIf="onRegisterForm.get('mobile').hasError('pattern')">
+              <ion-text style="color: red"> It is not a valid mobile number</ion-text>
+            </div>
+          </span>
+         </ion-col>
+
+        
+   
+      
+   
+         
+           <!-- <ion-item no-padding class="animated fadeInUp">
+             <ion-label position="floating">
+               <ion-icon name="md-calendar" item-start></ion-icon>
+                Date:
+             </ion-label>
+             <ion-input color="secondary" type="number" formControlName="date"></ion-input>
+           </ion-item> -->
+           <ion-col size="12">
+           <ion-item no-padding class="animated fadeInUp">
+              <ion-label position="floating">
+              <ion-icon name="md-calendar" item-start></ion-icon>
+              Date:
+            </ion-label>
+              <ion-datetime formControlName="visit_date" class="no-pl" color="primary" displayFormat="DD/MM/YYYY " pickerFormat="DD/MM/YYYY"></ion-datetime>
+              <!-- <ion-input color="secondary" formControlName="date"></ion-input> -->
+            </ion-item>
+            <p   *ngIf="onRegisterForm.get('visit_date').touched && onRegisterForm.get('visit_date').hasError('required')">
+             <ion-text color="danger">
+               field is required
+             </ion-text>
+           </p>
+         </ion-col>
+
+         <ion-col size="12">
+          <ion-item no-padding class="animated fadeInUp">
+             <ion-label position="floating">
+             <ion-icon name="md-alarm" item-start></ion-icon>
+           Arrival Time:
+           </ion-label>
+             <!-- <ion-datetime formControlName="visit_time" class="no-pl" color="primary" displayFormat="h:mm A" pickerFormat="h:mm A"></ion-datetime> -->
+             <ion-input color="black" formControlName="visit_time"></ion-input>
+           </ion-item>
+           <p ion-text class="text08"  *ngIf="onRegisterForm.get('visit_time').touched && onRegisterForm.get('visit_time').hasError('required')">
+            <ion-text color="danger">
+              field is required
+            </ion-text>
+          </p>
+        </ion-col>
+
+
+
+
+<!-- 
+         <ion-col size="12" no-padding>
+            <ion-item no-padding class="animated fadeInUp">
+              <ion-label position="floating">
+                <ion-icon name="md-alarm" item-start></ion-icon>
+                Arrival Time:
+              </ion-label>
+              <ion-input color="secondary" type="number" formControlName="time"></ion-input>
+            </ion-item>
+            <p ion-text class="text08"
+              *ngIf="onRegisterForm.get('time').touched && onRegisterForm.get('time').hasError('required')">
+              <ion-text color="danger">
+                field is required
+              </ion-text>
+            </p>
+          </ion-col> -->
+
+         </ion-row>
+     </ion-grid>
+   </form>
+
+   
+<div margin-top style="text-align:center">
+  <ion-button icon-left size="medium" expand="half" shape="round"  (click)="edit()" tappable>
+Update
+  </ion-button>
+</div> 
+   
+
+</ion-content>

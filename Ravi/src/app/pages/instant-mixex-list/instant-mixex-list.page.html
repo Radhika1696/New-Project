@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Instant Mixes List</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+  
+
+    <form [formGroup]="skillsForm" (ngSubmit)="onSubmit()">
+      <p>
+        <label for="name">Name </label>
+        <input type="text" id="name" name="name" formControlName="name">
+      </p>
+      Skills:
+      <div formArrayName="skills">
+        <div *ngFor="let skill of skills.controls; let i=index">
+          <div [formGroupName]="i">
+            <input type="text" formControlName="skill">
+          </div>
+        </div>
+      </div>
+      <p>
+        <button type="submit">Submit</button>
+      </p>
+    </form> 
+    <p>
+      <button type="button" (click)="addSkills()">Add</button>
+    </p> 
+     
+ 
+</ion-content>

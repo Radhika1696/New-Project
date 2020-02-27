@@ -1,0 +1,31 @@
+:host {
+  ion-content {
+    // --background: linear-gradient(-135deg, var(--ion-color-medium), var(--ion-color-light));
+    --background: white;
+  }
+
+
+img {
+  max-width: 100%;
+  border: 0;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+  ion-list {
+    &.list-md {
+      padding: 0;
+    }
+  }
+}
+.button-solid{background-color: #e0b910};
+
+b, strong {
+  font-weight: bold;
+  font-size: medium;
+}
+
+.abc{
+text-align: center;
+}
+

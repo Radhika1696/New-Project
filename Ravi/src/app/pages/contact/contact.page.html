@@ -1,0 +1,102 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Contact</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content padding>
+  <h1 margin-bottom>
+    <ion-text color="primary"><strong>Tell Us Your Message</strong></ion-text>
+  </h1>
+    <form [formGroup]="contactForm" class="list-form">
+
+
+        <ion-item no-padding class="animated fadeInUp">
+          <ion-label position="floating">
+           
+            Name
+          </ion-label>
+          <ion-input color="secondary" type="text" formControlName="name"></ion-input>
+        </ion-item>
+        <p ion-text class="text08"
+          *ngIf="contactForm.get('name').touched && contactForm.get('name').hasError('required')">
+          <ion-text color="danger">
+            Name is required
+          </ion-text>
+        </p>
+
+        <ion-item no-padding class="animated fadeInUp">
+            <ion-label position="floating">
+           
+              Email
+            </ion-label>
+            <ion-input color="secondary" type="email" formControlName="email"></ion-input>
+          </ion-item>
+          <span class="help-block"
+            *ngIf="contactForm.get('email').errors && (contactForm.get('email').touched || contactForm.get('email').dirty)">
+            <span *ngIf="contactForm.get('email').errors.required">
+              <ion-text style="color: red"> email is required</ion-text>
+            </span>
+            <span *ngIf="contactForm.get('email').hasError('pattern')">
+              <ion-text style="color: red"> Email must be a valid email address</ion-text>
+            </span>
+          </span>
+
+          <ion-item no-padding class="animated fadeInUp">
+              <ion-label position="floating">
+               
+              Subject
+              </ion-label>
+              <ion-input color="secondary" type="text" formControlName="subject"></ion-input>
+            </ion-item>
+            <p ion-text class="text08"
+              *ngIf="contactForm.get('subject').touched && contactForm.get('subject').hasError('required')">
+              <ion-text color="danger">
+                subject is required
+              </ion-text>
+            </p>
+
+            <ion-item no-padding class="animated fadeInUp">
+                <ion-label position="floating">
+                
+             You Message
+                </ion-label>
+                <ion-textarea color="secondary" type="textarea" formControlName="msg"></ion-textarea>
+              </ion-item>
+              <p ion-text class="text08"
+                *ngIf="contactForm.get('msg').touched && contactForm.get('msg').hasError('required')">
+                <ion-text color="danger">
+                  Name is required
+                </ion-text>
+              </p>
+  
+
+      </form>
+
+ <div class="btn">
+        <ion-button  size="medium"  shape="round"  (click)="send()"
+          tappable>
+         Send
+        </ion-button>
+      </div>
+<br>
+<div>
+      <h1 margin-bottom>
+          <ion-text color="primary"><strong>Get In Touch</strong></ion-text>
+        </h1>
+      <ion-row>
+        <ion-col>
+          <h4> <strong>Address</strong></h4>
+          <p> Kothrud,Pune</p>
+        </ion-col>
+        <ion-col>
+          <h4> <strong> Telephone No.</strong></h4>
+            <p>8748585858</p>
+            <p>8745858585</p>
+          </ion-col>
+      </ion-row>
+    </div>
+</ion-content>

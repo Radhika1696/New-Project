@@ -1,0 +1,29 @@
+:host {
+  ion-content {
+    --background: linear-gradient(-135deg, var(--ion-color-medium), var(--ion-color-light))
+  }
+
+  *{
+    line-height: 24px;
+  }
+
+  .btn{
+    padding:10px;
+    font-size: 200%;
+  }
+
+  ion-card {
+     background-color: rgb(75, 30, 156);
+     color:white
+  }
+
+  .pqr{
+    margin-top:15px;
+    // padding:10px;
+  }
+
+  ion-item{
+    background-color: white;
+    color:black;
+  }
+}

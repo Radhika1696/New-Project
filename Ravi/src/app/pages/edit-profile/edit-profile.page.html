@@ -1,0 +1,226 @@
+<!-- <ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'app.pages.editprofile.title.header' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+ 
+    <ion-card-content class="bg-profile">
+      <img src="assets/img/avatar.jpeg">
+       <h1 class="fw500">João Firmino</h1>
+ 
+      <ion-button  color="secondary" (click)="edit()">
+      
+       Edit
+      </ion-button>
+      <ion-button icon-left color="secondary" (click)=" takephoto()">
+        <ion-icon name="photos"></ion-icon> 
+        {{ 'Select Photo' | translate }}
+      </ion-button>
+    </ion-card-content>
+  
+
+    
+        <form [formGroup]="onRegisterForm" class="list-form">
+        
+           <ion-row>
+             <ion-col size="12" no-padding>
+               <ion-item no-padding class="animated fadeInUp">
+                 <ion-label  position="floating">
+                   <ion-icon name="person" item-start></ion-icon>
+                  First Name
+                 </ion-label>
+                 <ion-input color="secondary" type="text" formControlName="first_name"></ion-input>
+               </ion-item>
+               <p ion-text class="text08"
+                 *ngIf="onRegisterForm.get('first_name').touched && onRegisterForm.get('first_name').hasError('required')">
+                 <ion-text color="danger">
+                   field is required
+                 </ion-text>
+               </p>
+             </ion-col>
+       
+             <ion-col size="12" no-padding>
+               <ion-item no-padding class="animated fadeInUp">
+                 <ion-label position="floating">
+                   <ion-icon name="person" item-start></ion-icon>
+                   Last Name
+                 </ion-label>
+                 <ion-input color="secondary" type="text" formControlName="last_name"></ion-input>
+               </ion-item>
+               <p ion-text class="text08"
+                 *ngIf="onRegisterForm.get('last_name').touched && onRegisterForm.get('last_name').hasError('required')">
+                 <ion-text color="danger">
+                   field is required
+                 </ion-text>
+               </p>
+             </ion-col>
+        -->
+             <!-- <ion-col size="12" no-padding>
+               <ion-item no-padding class="animated fadeInUp">
+                 <ion-label position="floating">
+                   <ion-icon name="person" item-start></ion-icon>
+                  Gender
+                 </ion-label>
+                 <ion-input color="secondary" type="text" formControlName="gender"></ion-input>
+               </ion-item>
+               <p ion-text class="text08"
+                 *ngIf="onRegisterForm.get('gender').touched && onRegisterForm.get('gender').hasError('required')">
+                 <ion-text color="danger">
+                   field is required
+                 </ion-text>
+               </p>
+             </ion-col> -->
+       
+             <!-- <ion-col size="12" no-padding>
+               <ion-item no-padding class="animated fadeInUp">
+                 <ion-label position="floating">
+                   <ion-icon name="person" item-start></ion-icon>
+                    Email
+                 </ion-label>
+                 <ion-input color="secondary" type="email" formControlName="email"></ion-input>
+               </ion-item>
+               <p ion-text class="text08"
+                 *ngIf="onRegisterForm.get('email').touched && onRegisterForm.get('email').hasError('required')">
+                 <ion-text color="danger">
+                   field is required
+                 </ion-text>
+               </p>
+             </ion-col> -->
+
+             <!-- <ion-col size="12" no-padding>
+                <ion-item no-padding class="animated fadeInUp">
+                  <ion-label position="floating">
+                    <ion-icon name="person" item-start></ion-icon>
+                     Mobile No.
+                  </ion-label>
+                  <ion-input color="secondary" type="number" formControlName="mobile"></ion-input>
+                </ion-item>
+                <p ion-text class="text08"
+                  *ngIf="onRegisterForm.get('mobile').touched && onRegisterForm.get('mobile').hasError('required')">
+                  <ion-text color="danger">
+                    field is required
+                  </ion-text>
+                </p>
+              </ion-col>
+
+              <ion-col size="12" no-padding>
+                  <ion-item no-padding class="animated fadeInUp">
+                    <ion-label position="floating">
+                      <ion-icon name="person" item-start></ion-icon>
+                      Date of Birth
+                    </ion-label>
+                    <ion-input color="secondary" type="text" formControlName="dob"></ion-input>
+                  </ion-item>
+                  <p ion-text class="text08"
+                    *ngIf="onRegisterForm.get('dob').touched && onRegisterForm.get('dob').hasError('required')">
+                    <ion-text color="danger">
+                      field is required
+                    </ion-text>
+                  </p>
+                </ion-col>
+
+                <ion-col size="12" no-padding>
+                    <ion-item no-padding class="animated fadeInUp">
+                      <ion-label position="floating">
+                        <ion-icon name="person" item-start></ion-icon>
+                        PAN No.
+                      </ion-label>
+                      <ion-input color="secondary" type="text" formControlName="pan_no"></ion-input>
+                    </ion-item>
+                    <p ion-text class="text08"
+                      *ngIf="onRegisterForm.get('pan_no').touched && onRegisterForm.get('pan_no').hasError('required')">
+                      <ion-text color="danger">
+                        field is required
+                      </ion-text>
+                    </p>
+                  </ion-col>
+
+                  <ion-col size="12" no-padding>
+                      <ion-item no-padding class="animated fadeInUp">
+                        <ion-label position="floating">
+                          <ion-icon name="person" item-start></ion-icon>
+                         Adhar No.
+                        </ion-label>
+                        <ion-input color="secondary" type="text" formControlName="adhar_no"></ion-input>
+                      </ion-item>
+                      <p ion-text class="text08"
+                        *ngIf="onRegisterForm.get('adhar_no').touched && onRegisterForm.get('adhar_no').hasError('required')">
+                        <ion-text color="danger">
+                          field is required
+                        </ion-text>
+                      </p>
+                    </ion-col>
+
+             </ion-row>
+         
+       </form>
+       -->
+
+      
+  
+    
+    <!-- <form [formGroup]="onRegisterForm" class="list-form">
+    <ion-grid fixed no-padding>
+      <ion-row>
+        <ion-col size="12" padding>
+
+  
+
+            <ion-item>
+              <ion-label color="primary">First Name</ion-label>
+              <ion-input inputmode="text" formControlName="first_name"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label color="primary">Last Name</ion-label>
+              <ion-input inputmode="text" formControlName="last_name"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="primary">Gender</ion-label>
+                <ion-input inputmode="text" formControlName="gender"></ion-input>
+            </ion-item>
+             
+
+            <ion-item>
+              <ion-label color="primary">Email</ion-label>
+              <ion-input inputmode="email" formControlName="email"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label color="primary">Mobile No.</ion-label>
+              <ion-input inputmode="number" formControlName="mobile"></ion-input>
+            </ion-item>
+
+            <ion-item>
+               
+              <ion-label color="primary">Date of Birth</ion-label>
+              <ion-input display-format="YYYY-MM-DD"  formControlName="dob"></ion-input>
+            </ion-item>
+          
+
+            <ion-item>
+              <ion-label color="primary">PAN No.</ion-label>
+              <ion-input inputmode="number" formControlName="pan_no"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label color="primary">Adhar No.</ion-label>
+              <ion-input inputmode="number" formControlName="adhar_no"></ion-input>
+            </ion-item>
+
+  
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+   
+    <ion-button no-margin size="large" expand="full" color="dark" (click)="sendData()">{{ 'update' | translate }}</ion-button>
+  </form> -->
+
+
+

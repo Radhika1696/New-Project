@@ -1,0 +1,107 @@
+ <ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'Services ' | translate }}</ion-title>
+    <!-- <ion-buttons slot="end" class="btn" (click)="add()">
+        <ion-icon name="md-add-circle"></ion-icon>
+    </ion-buttons> -->
+ 
+  </ion-toolbar>
+</ion-header>
+  <!-- <ion-toolbar color="dark">
+    <ion-title>
+      <h6 no-margin>({{ shops.length }}) {{ 'app.label.resultsf' | translate }}</h6>
+    </ion-title>
+  </ion-toolbar> -->
+
+
+<ion-content padding class="animated fadeIn">
+  
+  
+
+        <ion-item>
+          <ion-label><strong>Service Category List</strong></ion-label>
+          <ion-select   (ionChange)="checkValue($event)">
+            <ion-select-option *ngFor="let data of service_list"  [value]="data.service_cat_id" >{{data.service_category}}</ion-select-option>
+        </ion-select>
+        </ion-item>
+
+ 
+          <div class="pqr" *ngIf="servicecatlist">
+            <ion-item  >
+         
+              <ion-thumbnail slot="start">
+                  <img  src="{{servicecatlist?.image}}" class="center">
+                </ion-thumbnail> 
+                <ion-label >
+            
+            <h3> <strong> Name</strong>&nbsp;:&nbsp;{{servicecatlist?.name}} </h3>
+              <h3> <strong> Contact</strong>&nbsp;:&nbsp;{{servicecatlist?.mobile}}</h3>
+              <ion-button (click)="detail(servicecatlist.vendor_id)" >View</ion-button>
+           
+            </ion-label>
+          </ion-item>
+        </div> 
+        </ion-content>
+
+
+              <!-- <ion-badge slot="start" color="secondary" class="rooms">
+                <ion-icon name="book" color="tertiary"></ion-icon>
+                {{ 'app.label.daily' | translate }} {{ shop.price | currency }}
+              </ion-badge> -->
+           
+            <!-- <p>
+              <ion-icon name="person" color="tertiary"></ion-icon> {{ shop.passengers_from }}-{{ shop.passengers_to }} | <ion-icon name="briefcase" color="tertiary"></ion-icon> {{ shop.luggage }}
+            </p> -->
+            <!-- <ion-badge color="success">
+              {{ 'app.label.total' | translate }} <strong>{{ shop.price * numDays | currency }}</strong>
+            </ion-badge> -->
+         
+  
+    
+    <!-- <ion-item color="primary" class="abc" margin-bottom >
+      <div class="img">
+      <img src="assets/img/profile.jpg" class="img1">
+    </div>
+      <ion-label>
+        <h2 text-align="center"><strong>Cable Operator</strong></h2>
+        <ion-item color="primary">
+         <ion-icon name="person" ></ion-icon> 
+          <ion-label>Name:</ion-label>
+          <ion-input  type="text" ></ion-input>
+      </ion-item>
+      <ion-item color="primary">
+         <ion-icon name="call" ></ion-icon> 
+        <ion-label >Contact:</ion-label>
+        <ion-input  type="text" ></ion-input>
+    </ion-item>
+       <div class="text-center">
+         <ion-button color="secondary" (click)="detail()">View</ion-button>
+       </div>
+      </ion-label>
+    </ion-item>
+
+    <ion-item color="primary"  margin-bottom >
+        <div class="img">
+        <img src="assets/img/profile.jpg" class="img1"> 
+      </div>
+        <ion-label>
+          <h2><strong>Security Guard</strong></h2>
+          <ion-item color="primary">
+            <ion-icon name="person" ></ion-icon> 
+            <ion-label>Name:</ion-label>
+            <ion-input color="secondary" type="text" ></ion-input>
+        </ion-item>
+        <ion-item color="primary">
+        <ion-icon name="call" ></ion-icon>
+          <ion-label>Contact:</ion-label>
+          <ion-input color="secondary" type="text" ></ion-input>
+      </ion-item >
+         <div class="text-center">
+           <ion-button color="secondary"  (click)="detail()">View</ion-button>
+         </div>
+        </ion-label>
+      </ion-item> -->
+  

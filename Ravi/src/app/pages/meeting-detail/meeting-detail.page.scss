@@ -1,0 +1,16 @@
+:host {
+    ion-content {
+        --background: linear-gradient(-135deg, var(--ion-color-medium), var(--ion-color-light))
+    }
+
+    *{
+        line-height: 13px;
+    }
+}
+.item.sc-ion-label-md-h, .item .sc-ion-label-md-h{    white-space: unset;}
+.des{
+    line-height:22px;
+}
+ion-item{
+    background-color:white;
+}

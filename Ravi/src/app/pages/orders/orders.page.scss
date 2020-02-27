@@ -1,0 +1,19 @@
+:host {
+    ion-content {
+      // --background: linear-gradient(-135deg, var(--ion-color-medium), var(--ion-color-light));
+      --background: white;
+    }
+}
+h4{
+    margin-top: 15px;
+    float: right;
+}
+
+ion-item{
+ 
+    margin-top:10px;
+}
+
+ion-item {
+    --ion-item-background: white;
+}

@@ -1,0 +1,45 @@
+:host {
+    ion-content {
+      --background: linear-gradient(-135deg, var(--ion-color-medium), var(--ion-color-light))
+    }
+  
+    .btn1{
+      padding:10px;
+      font-size: 200%;
+    }
+  
+    .btn2{
+      padding:0px;
+      font-size: 150%;
+     margin-bottom: 10%;
+   
+    }
+
+    *{
+      line-height: 24px;
+    }
+  
+    .btn{
+     float:right;
+      padding-left:10px;
+      font-size: 150%;
+     margin-bottom: 10%;
+    
+     }
+    
+  }
+  
+  .pqr{
+    margin-top:15px;
+    // padding:10px;
+  }
+
+  
+  .item.sc-ion-label-md-h, .item .sc-ion-label-md-h{    white-space: unset;}
+  
+  ion-item{
+    background-color: white;
+    color:black;
+  }
+  
+  

@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar class="head">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content> 
+    <div padding-top padding-horizontal>
+      </div>
+      <div class="abc">
+      <ion-grid class="is-product-tiles">
+    <ion-row>
+    <ion-col col-6 no-padding>
+       
+        <img src="assets/img/gehu.png">
+        <ion-card-content>
+<!--        
+          <ion-button (click)="idli()">Idli</ion-button> -->
+        </ion-card-content>
+   
+    </ion-col>
+    </ion-row>
+      </ion-grid>
+      </div>
+
+      <!-- <ion-item>
+          <ion-label>Select Quantity</ion-label>
+          <ion-select  [(ngModel)]="quantity"> 
+              <ion-option *ngFor="let number of numbers let i = index" >{{i + 1}}</ion-option>
+          </ion-select>
+        </ion-item><br>  -->
+
+        <ion-item>
+            <ion-label>Select Type</ion-label>
+            <ion-select  [(ngModel)]="quantity"> 
+                <!-- <ion-option *ngFor="let number of numbers let i = index" >{{i + 1}}</ion-option> -->
+            </ion-select>
+          </ion-item><br> 
+
+         <ion-item>
+          <ion-label>Select Quantity</ion-label>
+          <ion-select  [(ngModel)]="quantity"> 
+              <!-- <ion-option *ngFor="let number of numbers let i = index" >{{i + 1}}</ion-option> -->
+          </ion-select>
+        </ion-item><br> 
+
+
+        <ion-grid> 
+  
+            <ion-row>
+              <ion-col>
+                <button  ion-button full round color="green" (click)="add()">Add to Cart</button>
+              </ion-col>
+              <ion-col>
+                  <button ion-button full round color="green" (click)="goback()">Go Back</button>
+                </ion-col>
+                <ion-col>
+              <button ion-button full round color="green"    (click)="review1()">Review Cart</button>
+              <ion-input type="text" value="" *ngIf="hide"></ion-input>
+            </ion-col>
+            </ion-row>
+          </ion-grid>
+</ion-content>

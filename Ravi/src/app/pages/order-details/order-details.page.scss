@@ -1,0 +1,34 @@
+:host {
+    ion-content {
+      // --background: linear-gradient(-135deg, var(--ion-color-medium), var(--ion-color-light));
+      --background: white;
+    }
+
+    // ion-row{
+    //   background-color: grey;
+    // }
+    ion-segment-button{
+      background-color: white;
+    }
+    .pqr{
+      margin-top:15px;
+      // padding:10px;
+    }
+    
+    // ion-item{
+    //   background-color: white;
+    //   color:black;
+    // }
+    ion-item {
+      --ion-item-background: white;
+  }
+
+    h3{
+      font-size: 15px;;
+    }
+
+    ion-slide {
+      height: calc(100vh - 140px);
+    }
+    .item.sc-ion-label-md-h, .item .sc-ion-label-md-h{    white-space: unset;}
+}

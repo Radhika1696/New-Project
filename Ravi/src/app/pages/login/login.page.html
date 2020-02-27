@@ -1,0 +1,63 @@
+<ion-content padding class="animated fadeIn login auth-page">
+
+
+  <div class="auth-content">
+
+    <!-- Logo -->
+    <div padding-horizontal text-center class="animated fadeInDown">
+         <img class="logo animated fadeInDown" src="assets/img/logo.png">
+      <!-- <div class="logo"></div> -->
+      <h4 no-margin>
+        <ion-text color="red">
+          {{ 'Login ' | translate }}
+          <!-- <ion-text color="secondary" class="fw700"> {{ 'app.version' | translate }}</ion-text> -->
+        </ion-text>
+      </h4>
+    </div>
+
+    <!-- Login form -->
+    <form [formGroup]="onLoginForm" class="list-form">
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="mail" item-start></ion-icon>
+          {{ 'Email' | translate }}
+        </ion-label>
+        <ion-input color="primary" type="text" formControlName="email"></ion-input>
+      </ion-item>
+      <p ion-text class="text08"
+        *ngIf="onLoginForm.get('email').touched && onLoginForm.get('email').hasError('required')">
+        <ion-text color="danger">
+          {{ 'app.label.errors.field' | translate }}
+        </ion-text>
+      </p>
+
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="lock" item-start></ion-icon>
+          {{ 'app.label.password' | translate }}
+        </ion-label>
+        <ion-input color="black" type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <p ion-text color="danger" class="text08"
+        *ngIf="onLoginForm.get('password').touched && onLoginForm.get('password').hasError('required')">
+        <ion-text color="danger">
+          {{ 'app.label.errors.field' | translate }}
+        </ion-text>
+      </p>
+    </form>
+    <ion-button icon-left size="medium" expand="full" shape="round" color="dark" (click)="onSubmit()"
+      [disabled]="!onLoginForm.valid" tappable>
+      <ion-icon name="log-in"></ion-icon>
+      {{ 'app.button.signin' | translate }}
+    </ion-button>
+
+
+
+    <div padding-horizontal>
+      <p style="color:rgb(23,68,20)">
+        Not Register Yet? <a (click)="register()" style="color:black">Register Here</a>
+      </p>
+    </div>
+  </div>
+
+</ion-content>

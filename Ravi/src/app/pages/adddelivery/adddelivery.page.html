@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add Delivery</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+
+  <form [formGroup]="onRegisterForm" class="list-form">
+   <ion-grid class="is-product-tiles">
+     <ion-row>
+       <ion-col size="12" no-padding>
+         <ion-item no-padding class="animated fadeInUp">
+           <ion-label  position="floating">
+              <ion-icon name="md-list" ></ion-icon>
+     Delivery Details:
+           </ion-label>
+           <ion-input color="black" type="text" formControlName="delivery_details"></ion-input>
+         </ion-item>
+         <p ion-text class="text08"
+           *ngIf="onRegisterForm.get('delivery_details').touched && onRegisterForm.get('delivery_details').hasError('required')">
+           <ion-text color="danger">
+             field is required
+           </ion-text>
+         </p>
+       </ion-col>
+
+       <!-- <ion-col size="12" no-padding>
+        <ion-item no-padding class="animated fadeInUp">
+          <ion-label  position="floating">
+             <ion-icon name="home" ></ion-icon>
+    Block :
+          </ion-label>
+          <ion-input color="black" type="text" formControlName="block_id"></ion-input>
+        </ion-item>
+        <p ion-text class="text08"
+          *ngIf="onRegisterForm.get('block_id').touched && onRegisterForm.get('block_id').hasError('required')">
+          <ion-text color="danger">
+            field is required
+          </ion-text>
+        </p>
+      </ion-col>
+
+
+      <ion-col size="12" no-padding>
+        <ion-item no-padding class="animated fadeInUp">
+          <ion-label  position="floating">
+             <ion-icon name="home" ></ion-icon>
+    Flat No.:
+          </ion-label>
+          <ion-input color="black" type="text" formControlName="flat_no"></ion-input>
+        </ion-item>
+        <p ion-text class="text08"
+          *ngIf="onRegisterForm.get('flat_no').touched && onRegisterForm.get('flat_no').hasError('required')">
+          <ion-text color="danger">
+            field is required
+          </ion-text>
+        </p>
+      </ion-col> -->
+
+       <ion-col size="12">
+        <ion-item no-padding class="animated fadeInUp">
+           <ion-label position="floating">
+           <ion-icon name="md-calendar" item-start></ion-icon>
+          Delivery Date:
+         </ion-label>
+         <ion-datetime formControlName="delivery_date" class="no-pl" [min]="today" [max]="future_year" color="primary" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY"></ion-datetime>
+           <!-- <ion-datetime formControlName="delivery_date" class="no-pl" color="primary" displayFormat="DD/MM/YYYY " pickerFormat="DD/MM/YYYY"></ion-datetime> -->
+           <!-- <ion-input color="secondary" formControlName="date"></ion-input> -->
+         </ion-item>
+         <p   *ngIf="onRegisterForm.get('delivery_date').touched && onRegisterForm.get('delivery_date').hasError('required')">
+          <ion-text color="danger">
+            field is required
+          </ion-text>
+        </p>
+      </ion-col>
+
+      <ion-col size="12">
+       <ion-item no-padding class="animated fadeInUp">
+          <ion-label position="floating">
+          <ion-icon name="md-alarm" item-start></ion-icon>
+       Approximate Time:
+        </ion-label>
+          <!-- <ion-datetime formControlName="delivery_time" class="no-pl" color="primary" displayFormat="h:mm A" pickerFormat="h:mm A"></ion-datetime> -->
+          <ion-input color="black" type="text" formControlName="delivery_time"></ion-input>
+        </ion-item>
+        <p  ion-text class="text08" *ngIf="onRegisterForm.get('delivery_time').touched && onRegisterForm.get('delivery_time').hasError('required')">
+         <ion-text color="danger">
+           field is required
+         </ion-text>
+       </p>
+     </ion-col>
+
+   
+ 
+ 
+       </ion-row>
+   </ion-grid>
+ </form>
+ 
+ <div margin-top style="text-align:center">
+   <ion-button icon-left size="medium" expand="half" shape="round" (click)="add()"  tappable>
+     Add
+   </ion-button>
+ </div> 
+ </ion-content>
+

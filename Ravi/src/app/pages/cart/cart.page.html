@@ -1,0 +1,129 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Cart</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+  <!-- <div *ngIf=!hide> -->
+  <ion-grid>
+    <ion-row>
+        <ion-col>
+          <strong>Flour Name</strong>
+        </ion-col>
+        <ion-col>
+          <strong>Quantity</strong>
+          </ion-col>
+        <ion-col>
+          <strong>Price</strong>
+        </ion-col>
+        <ion-col>
+          <strong>Amount</strong>
+        </ion-col> 
+        <ion-col>
+          <strong>Action</strong>
+        </ion-col>
+      </ion-row>
+
+      <div *ngFor="let data of current_cart">
+      <ion-row>
+        <ion-col>
+          {{data.name}}
+        </ion-col>
+        <ion-col>
+          {{data.quantity}}
+          </ion-col>
+        <ion-col>{{data.price}}</ion-col>
+        <ion-col>
+          {{data.amount}}
+        </ion-col> 
+        <ion-col>
+          <ion-buttons class="btn btn-success" clear (click)="ashish(d.id)">
+           <ion-icon name="close"></ion-icon>
+           </ion-buttons>  
+         </ion-col>
+      </ion-row> 
+    </div>
+  </ion-grid>
+       <ion-row >
+         <ion-col></ion-col>
+         <ion-col></ion-col>
+          <ion-col>
+          <strong> Total Amount</strong>
+         </ion-col> 
+     
+     
+        <ion-col>
+          <strong>र{{sum}}</strong>
+       </ion-col> 
+       <ion-col></ion-col>
+    </ion-row>
+   <!-- </ion-grid>
+
+    
+<br><br>
+        <!-- <ion-list padding>
+           <ion-item>
+              <ion-icon name="calendar" item-end></ion-icon>
+            <ion-label style="color:black">Delivery Date</ion-label>
+            <ion-datetime display-format="DD-MM-YYYY" ></ion-datetime>
+          </ion-item>
+          </ion-list>
+   
+      
+          <ion-list padding>
+          <ion-item>
+          <ion-icon name="clock" item-end></ion-icon>
+          <ion-label style="color:black">Delivery Time</ion-label>
+          <ion-datetime  class="no-pl" color="primary" displayFormat="h:mm A" pickerFormat="h:mm A"></ion-datetime>
+            <ion-input type="text"  display-format="HH-mm"   [(ngModel)]="delivery_time"></ion-input> 
+          </ion-item>
+          </ion-list> -->
+       
+          <ion-list padding>
+          <ion-item>
+            <ion-icon name="home" item-end></ion-icon>
+            <ion-label style="color:black">Address</ion-label>
+            <ion-input type="text" [(ngModel)]="addr" ></ion-input>
+            </ion-item><br><br> 
+          </ion-list>
+        
+       <div text-center>
+          <ion-button  full round  (click)="order()">Place Order</ion-button>
+        </div>
+      <!-- </div>
+      <div class="msg">
+        <strong>{{msg}}</strong>
+      </div> -->
+</ion-content>
+
+
+<ion-footer class="animated fadeIn">
+  <ion-toolbar color="primary">
+    <ion-grid no-padding>
+        <ion-row>
+          <ion-col size="6" no-padding>
+            <ion-button size="small" shape="round" expand="full" fill="clear" color="tertiary" routerLink="/home">
+              <ion-icon slot="start" name="home"></ion-icon>
+             Home
+            </ion-button>
+          </ion-col>
+          <ion-col size="6" no-padding>
+            <ion-button size="small" shape="round" expand="full" fill="clear" color="tertiary" routerLink="/cart">
+              <ion-icon slot="start" name="cart"></ion-icon>
+           Cart
+            </ion-button>
+          </ion-col>
+          <!-- <ion-col size="4" no-padding>
+            <ion-button size="small" shape="round" expand="full" fill="clear" color="light" (click)="settings()">
+              <ion-icon slot="start" name="cog"></ion-icon>
+              {{ 'app.pages.menu.settings' | translate }}
+            </ion-button>
+          </ion-col> -->
+        </ion-row>
+    </ion-grid> 
+   </ion-toolbar>
+</ion-footer> 

@@ -1,0 +1,23 @@
+:host {
+    ion-content {
+        // --background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
+        // --background: linear-gradient(135deg, rgb(23, 68, 20), #204614);
+        --background:rgb(23, 68, 20) ;
+    }
+
+    ion-list {
+        &.list-md {
+            padding: 0;
+        }
+    }
+
+    ion-color-primary{
+        --ion-color-base: rgba(23, 68, 20) !important;
+    }
+  
+
+    // .toolbar-content{
+    //     background-color: aqua
+    // }2
+  
+}

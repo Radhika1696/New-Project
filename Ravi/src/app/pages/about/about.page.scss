@@ -1,0 +1,10 @@
+:host {
+    ion-content {
+        --background: linear-gradient(-135deg, var(--ion-color-medium), var(--ion-color-light))
+    }
+
+    .bg-profile {
+        // background-image: linear-gradient(135deg, #dad9f1, #144634);
+        background-image: linear-gradient(#dad9f1) ;
+    }
+}

@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Edit Complaint</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content> 
+
+  <form [formGroup]="onRegisterForm" class="list-form">
+   <ion-grid class="is-product-tiles">
+     <ion-row>
+       <ion-col size="12" no-padding>
+         <ion-item no-padding class="animated fadeInUp">
+           <ion-label  position="floating">
+             <ion-icon name="person" item-start></ion-icon>
+         Title:
+           </ion-label>
+           <ion-input color="black" type="text" formControlName="complaint_title"></ion-input>
+         </ion-item>
+         <p ion-text class="text08"
+           *ngIf="onRegisterForm.get('complaint_title').touched && onRegisterForm.get('complaint_title').hasError('required')">
+           <ion-text color="danger">
+             field is required
+           </ion-text>
+         </p>
+       </ion-col>
+ 
+       <!-- <ion-col size="12" no-padding>
+         <ion-item no-padding class="animated fadeInUp">
+           <ion-label position="floating">
+             <ion-icon name="person" item-start></ion-icon>
+           Date:
+           </ion-label>
+           <ion-input color="black" type="text" formControlName="date"></ion-input>
+         </ion-item>
+         <p ion-text class="text08"
+           *ngIf="onRegisterForm.get('date').touched && onRegisterForm.get('date').hasError('required')">
+           <ion-text color="danger">
+             field is required
+           </ion-text>
+         </p>
+       </ion-col> -->
+ 
+       <ion-col size="12" no-padding>
+         <ion-item no-padding class="animated fadeInUp">
+           <ion-label position="floating">
+             <ion-icon name="md-list" item-start></ion-icon>
+         Description:
+           </ion-label>
+           <ion-textarea color="black" type="text" formControlName="description" cols="40" rows="7"></ion-textarea>
+         </ion-item>
+         <p ion-text class="text08"
+           *ngIf="onRegisterForm.get('description').touched && onRegisterForm.get('description').hasError('required')">
+           <ion-text color="danger">
+             field is required
+           </ion-text>
+         </p>
+       </ion-col>
+ 
+       <ion-col size="12" no-padding>
+         <ion-item no-padding class="animated fadeInUp">
+           <ion-label position="floating">
+             <ion-icon name="md-stats" item-start></ion-icon>
+        Priority:
+           </ion-label>
+           <ion-input color="black" type="text" formControlName="priority"></ion-input>
+         </ion-item>
+         <p ion-text class="text08"
+           *ngIf="onRegisterForm.get('priority').touched && onRegisterForm.get('priority').hasError('required')">
+           <ion-text color="danger">
+             field is required
+           </ion-text>
+         </p>
+       </ion-col>
+       </ion-row>
+   </ion-grid>
+ </form>
+ 
+ <div margin-top style="text-align: center;">
+   <ion-button icon-left size="medium" expand="half" shape="round" color="dark" (click)="edit()" tappable>
+     <!-- <ion-icon name="log-in"></ion-icon> -->
+     Update
+   </ion-button>
+ 
+ 
+ </div> 
+ </ion-content>
+

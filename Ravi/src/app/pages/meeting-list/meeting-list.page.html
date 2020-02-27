@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+    <ion-title>Meetings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="pqr" *ngFor="let meeting of view_meeting_list">
+    <ion-item >
+        <ion-thumbnail slot="start">
+            <img src="assets/img/meeting.png" class="center">
+          </ion-thumbnail> 
+      <ion-label >
+       
+        <h3><strong>{{meeting.subject}}</strong></h3>
+        <h3> {{meeting.meeting_date}} </h3>
+          <h3 >{{meeting.description}}</h3> 
+                  <ion-button (click)="detail(meeting)" shape="round">Read more</ion-button>  
+         </ion-label>
+      </ion-item>
+    </div>
+</ion-content>
+
+
+
+

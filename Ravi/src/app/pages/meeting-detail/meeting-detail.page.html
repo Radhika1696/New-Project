@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+    <ion-title>Meeting-details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+    <ion-content class="profile">
+ 
+        <ion-item >
+          <ion-label >
+          <h3> <strong>Title</strong>&nbsp;:&nbsp;{{meeting_detail?.subject}}</h3><br>
+         <h3><strong> Date</strong>&nbsp;:&nbsp;{{meeting_detail?.meeting_date}}</h3><br>
+         <h3><strong> Time</strong>&nbsp;:&nbsp;{{meeting_detail?.meeting_time}}</h3><br>
+         <h3> <strong>Location</strong>&nbsp;:&nbsp;{{meeting_detail?.location}}</h3><br>
+         <h3 class="des"><strong> Description</strong>&nbsp;:&nbsp;{{meeting_detail?.description}}</h3><br>
+             </ion-label>
+          </ion-item>
+    </ion-content>
+  
+  
+
+      
