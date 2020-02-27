@@ -120,7 +120,7 @@ export class AppComponent {
         title: 'My Orders',
         url: 'orders',
         direct: 'forward',
-        icon: 'cart'
+        icon: 'md-basket'
       },
           {
         title: 'About Us',
