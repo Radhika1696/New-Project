@@ -106,6 +106,18 @@ export class AuthService {
         return this.http.post(this.api_url + '/get_current_cart', user)
     }
 
+
+delete_cart(product_id) {
+    console.log(product_id);
+    
+        const user = {
+            id: product_id,
+            token: localStorage.getItem('token'),
+            product_id:product_id
+        }
+        return this.http.post(this.api_url + '/delete_cart_item', user)
+    }
+
     place_order( addr) {
         const token = localStorage.getItem('token')
         const user_id = localStorage.getItem('id')
