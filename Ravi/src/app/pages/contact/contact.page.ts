@@ -42,6 +42,7 @@ export class ContactPage implements OnInit {
       })
 }
 async send() {
+
   console.log(this.contactForm.value)
   if (!this.contactForm.value.name) {
     this.contactForm.controls['name'].markAsTouched()
@@ -61,6 +62,10 @@ async send() {
   if (!this.contactForm.value.subject) {
     this.contactForm.controls['subject'].markAsTouched()
     this.submit = true;
-  }}
+  }
+  else {
+    console.log(this.contactForm.value)
+}
+}
 
 }
