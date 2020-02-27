@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
- <!-- <ion-header>
+<!-- <ion-header>
   <ion-segment [(ngModel)]='currentTab' (ionChange)="segmentChanged($event)">
     <ion-segment-button value="official">
       <ion-label>Summary</ion-label>
@@ -81,24 +81,24 @@
       </div>
     </div>
   </div> -->
-  <ion-content class="animated-fading">
-    <ion-segment scrollable [(ngModel)]="hotelSegment" color="primary">
-      <ion-segment-button checked value="0">
-        <ion-label>Summary</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="1">
-        <ion-label>Items</ion-label>
-      </ion-segment-button>
-    </ion-segment>
-  
-    <ion-slides>
-      <ion-slide class="slide-1">
-        <!-- <ion-grid>
+<ion-content class="animated-fading">
+  <ion-segment scrollable [(ngModel)]="hotelSegment" color="primary">
+    <ion-segment-button checked value="0">
+      <ion-label><strong>Summary</strong></ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="1">
+      <ion-label><strong>Items</strong></ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-slides>
+    <ion-slide class="slide-1">
+      <!-- <ion-grid>
           <ion-row>
             <ion-col size="12" margin-bottom>
               <hr>
               <ion-list> -->
-                <!-- <ion-item *ngFor="let pendingitem of PendingList; let i = index">
+      <!-- <ion-item *ngFor="let pendingitem of PendingList; let i = index">
                   <ion-label>
                     <h2>
                       <ion-text color="primary">Activity {{pendingitem.activity_name}}</ion-text>
@@ -109,88 +109,88 @@
                     <p>Customer Phone : {{pendingitem.customer_phone}}</p>
                   </ion-label>
                 </ion-item> -->
-              <!-- </ion-list>
+      <!-- </ion-list>
             </ion-col>
           </ion-row>
         </ion-grid> -->
-     
-  
-  <ion-grid>
-    <ion-col size="12" margin-bottom>
-      <ion-list>
-    
-     
-        <h3>Delivery Slot</h3>
-        <div class="pqr">
-          <ion-item>
-            <ion-label>
-              <h3>Date&nbsp;:&nbsp;{{summary_details?.order_date}}</h3>
-              <!-- <h3> Time&nbsp;:&nbsp; </h3> -->
-              <h3>Order Status&nbsp;:{{summary_details?.order_status}}&nbsp; </h3>
-            </ion-label>
-          </ion-item>
-        </div>
-  
-        <h3>Address</h3>
-        <div class="pqr">
-          <ion-item>
-            <ion-label>
-              <!-- <h3>Radhika Rohane&nbsp;&nbsp;</h3> -->
-              <h3> {{summary_details?.address}} </h3>
-              <h3>
-                Mobile No
-              </h3>
-            </ion-label>
-          </ion-item>
-        </div>
-  
-        <h3>Payment Details</h3>
-        <div class="pqr">
-          <ion-item>
-            <ion-label>
-              <h3>Order No&nbsp;:&nbsp;</h3>
-              <h3>Payment Options&nbsp;:&nbsp; </h3>
-              <h3>Order Items&nbsp;:&nbsp;{{summary_details?.item_count}} </h3>
-              <h3>Total&nbsp;:&nbsp; </h3>
-            </ion-label>
-          </ion-item>
-        </div>
-      
-      </ion-list>
-    </ion-col>
-</ion-grid>
-      </ion-slide>
-  
-      <ion-slide class="slide-2">
-        <ion-grid>
-        
-            <ion-col size="12" margin-bottom>
-              <ion-list>
-                <div *ngFor="let data of item_details">
-                  <ion-item>
-                    <ion-thumbnail slot="start">
-                      <img src="{{data.full_image_path}}" class="center">
-                    </ion-thumbnail>
-                    <ion-label>
-                      <h3> {{data.name}}&nbsp;&nbsp; </h3>
-                      <h3> {{data.quantity}}kg&nbsp;&nbsp;</h3>
-                      <ion-row>
-                        <ion-col>
-                          <h3> Price:{{data.price}}&nbsp;&nbsp;</h3>
-                        </ion-col>
-                        <!-- <ion-col>
+
+
+      <ion-grid>
+        <ion-col size="12" margin-bottom>
+          <ion-list>
+
+
+            <p><strong>Delivery Slot</strong></p>
+            <div class="pqr">
+              <ion-item>
+                <ion-label>
+                  <p><strong>Date</strong>&nbsp;:&nbsp;{{summary_details?.order_date}}</p>
+                  <!-- <h3> Time&nbsp;:&nbsp; </h3> -->
+                  <p><strong>Order Status</strong>&nbsp;:{{summary_details?.order_status}}&nbsp; </p>
+                </ion-label>
+              </ion-item>
+            </div>
+
+            <p><strong>Address</strong></p>
+            <div class="pqr">
+              <ion-item>
+                <ion-label>
+                  <!-- <h3>Radhika Rohane&nbsp;&nbsp;</h3> -->
+                  <p> {{summary_details?.address}} </p>
+                  <p><strong>
+                    Mobile No
+                  </strong>
+                  </p>
+                </ion-label>
+              </ion-item>
+            </div>
+
+            <p><strong>Payment Details</strong></p>
+            <div class="pqr">
+              <ion-item>
+                <ion-label>
+                  <p><strong>Order No</strong>&nbsp;:&nbsp;</p>
+                  <p><strong>Payment Options</strong>&nbsp;:&nbsp; </p>
+                  <p><strong>Order Items</strong>&nbsp;:&nbsp;{{summary_details?.item_count}} </p>
+                  <p><strong>Total</strong>&nbsp;:&nbsp; </p>
+                </ion-label>
+              </ion-item>
+            </div>
+
+          </ion-list>
+        </ion-col>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="slide-2">
+      <ion-grid>
+
+        <ion-col size="12" margin-bottom>
+          <ion-list>
+            <div *ngFor="let data of item_details">
+              <ion-item>
+                <ion-thumbnail slot="start">
+                  <img src="{{data.full_image_path}}" class="center">
+                </ion-thumbnail>
+                <ion-label>
+                  <p> {{data.name}}&nbsp;&nbsp; </p>
+                  <p> {{data.quantity}}kg&nbsp;&nbsp;</p>
+                  <ion-row>
+                    <ion-col>
+                      <p><strong> Price</strong>&nbsp;:&nbsp;{{data.price}}&nbsp;&nbsp;</p>
+                    </ion-col>
+                    <!-- <ion-col>
                           <h3> Quantity:1&nbsp;&nbsp;</h3>
                         </ion-col> -->
-                      </ion-row>
-                    </ion-label>
-                  </ion-item>
-                </div>
-              </ion-list>
-            </ion-col>
-        
-        </ion-grid>
-      </ion-slide>
-     
-    </ion-slides>
-</ion-content> 
+                  </ion-row>
+                </ion-label>
+              </ion-item>
+            </div>
+          </ion-list>
+        </ion-col>
 
+      </ion-grid>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

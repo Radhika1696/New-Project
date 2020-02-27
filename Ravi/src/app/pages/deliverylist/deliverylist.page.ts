@@ -33,7 +33,7 @@ get_delivery_list(){
   })
 }
 
-ionViewDidEnter(){ 
+ionViewDidLoad(){ 
   this.get_delivery_list();
 }
 
@@ -68,7 +68,7 @@ this.authservice.delete_delivery(this.delivery_id).subscribe((data)=>{
     this.presentalert(this.deletedelivery_list.data.error_msg);
   }
 
-  this.ionViewDidEnter();
+  this.ionViewDidLoad();
 })
 
 }

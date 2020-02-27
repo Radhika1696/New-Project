@@ -4,14 +4,22 @@
       --background:white;
     }
 
-    p{
-      margin-top:10px;
-    }
+    // p{
+    //   margin-top:10px;
+    // }
 
 
-  .pqr{
-           margin-top: 10px;
-  }
+  // .pqr{
+  //          margin-top: 10px;
+  // }
+
+  .sc-ion-input-md-h {
+    --padding-top: 0px;
+    --padding-end: 0;
+    --padding-bottom: 0px;
+    --padding-start: 0px;
+    font-size: inherit;
+}
 
   img {
     max-width: 85%;
@@ -19,18 +27,26 @@
     padding:10px;
   }
 
+  ion-badge{
+    width: 70%;
+    height: 27px;
+    background-color: white
+  }
+
 
   h3 {
     font-size: 17px;
+    padding:0px !important;
+    margin:0px !important;
 }
   
   // ion-grid{
   //   background-color: white;
   // }
 
-  ion-button{
-  margin-top: 10px;
-  }
+  // ion-button{
+  // margin-top: 10px;
+  // }
 }
 
 

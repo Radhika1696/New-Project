@@ -10,7 +10,7 @@ import { FormGroup, FormControl, FormArray, FormBuilder, Validators } from '@ang
   styleUrls: ['./grain-flour-list.page.scss'],
 })
 export class GrainFlourListPage implements OnInit {
-
+  qty
   form: FormGroup;
   packagesArray: FormArray;
   sampledata
@@ -26,14 +26,38 @@ export class GrainFlourListPage implements OnInit {
   Flours_list
  amount
  numbers
-
+ product_list
  
   constructor(public navCtrl: NavController, private fb: FormBuilder,  private toastCtrl: ToastController,private alertCtrl: AlertController,
     public route: ActivatedRoute, public router: Router, public authservice: AuthService) {
-
+      this.qty = Array;
       this.numbers = Array(100).fill(0).map((i)=>i);
       this.createEventForm();
   }
+
+  // increment product qty
+  incrementQty(i) {
+    if(!this.qty[i])
+    {
+      
+      this.qty[i] = 1;
+    }
+    console.log(this.qty[i]+1);
+    this.qty[i] += 1;
+   
+    }
+  
+  // decrement product qty
+  decrementQty(i) {
+    if(this.qty[i]-1 < 1 ){
+    this.qty[i] = 1
+    console.log('1->'+this.qty[i]);
+    }else{
+    this.qty[i] -= 1;
+    console.log('2->'+this.qty[i]);
+    }
+  
+    }
 
   createEventForm() {
     this.form = this.fb.group({
@@ -43,25 +67,28 @@ export class GrainFlourListPage implements OnInit {
   ngOnInit() {
 
     this.route.queryParams.subscribe(params => {
-        this.category_id = params.id;
+      this.category_id = params.id;
 
-        this.authservice.flour_list(this.category_id).subscribe((data) => {
-          this.Flours_list = data
-          this.flour_list = this.Flours_list.data
+      this.authservice.flour_list(this.category_id).subscribe((data) => {
+        this.Flours_list = data
+        this.flour_list = this.Flours_list.data
+        for(let i= 0; i<=this.flour_list.length; i++)
+        {
+          this.qty[i] = 1;
 
-          for(let flour of this.flour_list){
-            this.addSection(flour)
-          }
+        }
+        for(let flour of this.flour_list){
+          this.addSection(flour)
+        }
 
-        })
       })
+    })
 
-      this.form = new FormGroup({
-        sections: new FormArray([
-          //this.initSection(null),
-        ]),
-      });
-
+    this.form = new FormGroup({
+      sections: new FormArray([
+        //this.initSection(null),
+      ]),
+    });
 
   }
 

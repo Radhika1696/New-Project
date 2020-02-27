@@ -79,39 +79,76 @@
          
 
           <div class="form-group">
-            <!-- <label for="packageprice">{{flour_name}}</label> -->
-            <!-- <input type="text" class="form-control" autocomplete="off"  formControlName="name"> -->
+         
             <h3><b>{{flour.name}}</b></h3>
           </div>
 
+     
+ 
           <div class="form-group">
+    
+
             <label for="packagequantity">Quantity</label>
-            <!-- <input type="number" class="form-control" autocomplete="off"  formControlName="quantity"> -->
-            <ion-select  formControlName="quantity"> 
-              <ion-select-option *ngFor="let number of numbers let i = index" >{{i + 1}}</ion-select-option>
-          </ion-select>
-          </div>
+         <!-- <ion-row>
+            <ion-col col-2>
+              <button class="add-btn" clear (click)="decrementQty(i)"><ion-icon name="remove-circle" ></ion-icon></button>
+            </ion-col><ion-col col-2>
+              <ion-input  placeholder="1" [value]="qty[i]" formControlName="quantity"></ion-input>
+            </ion-col><ion-col col-2>
+              <button class="add-btn" clear (click)="incrementQty(i)"><ion-icon name="add-circle" ></ion-icon></button>
+            </ion-col>
+          </ion-row>  -->
+
+
+         <ion-badge>
+           <ion-row>
+            <button clear (click)="incrementQty(i)" style="padding:3px;"><ion-icon name="add-outline" color="#204614"></ion-icon></button>
+            <ion-input  placeholder="1" [value]="qty[i]" formControlName="quantity"></ion-input>
+            <button clear (click)="decrementQty(i)" style="padding:3px;"><ion-icon name="remove-outline" color="#204614"></ion-icon></button>
+          </ion-row>
+          </ion-badge>
+         
+        </div>
+   
 
           <div class="form-group">
-            <!-- <label for="packagename">Product Id</label> -->
+         
             <input type="hidden"  class="form-control" autocomplete="off" [ngModel]="flour.id" formControlName="category_id">
           </div>
 
           <div class="form-group">
-            <!-- <label for="packageprice">{{flour_name}}</label> -->
-            <!-- <input type="hidden" class="form-control" autocomplete="off"  formControlName="price"> -->
+      
             <h3>Price:{{flour.price}}/kg</h3>
           </div>
 
           <ion-button  (click)="add(i)">Add</ion-button>
      
         </ion-col>
+<!-- <ion-col>
+        <table style="border:2px;">
+            <tr>
+              <td colspan="2">Gehu</td>
+            </tr>
+            <tr>
+                <td>Quentity</td> <td> Buttons </td>
+            </tr>
+            <tr>
+              <td colspan="2">Price</td>
+            </tr>
+            <tr>
+              <td colspan="2">Button</td>
+            </tr>
+          </table>
+        </ion-col> -->
         </ion-row>
      <hr>
         </div>
       </div>
       <input [disabled]=!form.valid type="hidden" class="btn btn-primary" value="Submit">
   </form>
+
+
+
  
 </ion-content>
 

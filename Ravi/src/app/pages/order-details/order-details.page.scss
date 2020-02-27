@@ -24,11 +24,24 @@
   }
 
     h3{
-      font-size: 15px;;
+      font-size: 15px;
     }
 
-    ion-slide {
-      height: calc(100vh - 140px);
-    }
+    // ion-slide {
+    //   height: calc(100vh - 140px);
+    // }
+
+    [_nghost-aqb-c4] ion-slide[_ngcontent-aqb-c4] {
+      height: 100%;
+  }
+
+  p{
+    color:black;
+  }
+
+    // ion-slide {
+    //   height:100%;
+    // }
+
     .item.sc-ion-label-md-h, .item .sc-ion-label-md-h{    white-space: unset;}
 }
