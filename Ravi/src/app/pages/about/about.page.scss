@@ -1,10 +1,44 @@
+// :host {
+//     ion-content {
+//         --background: linear-gradient(-135deg, var(--ion-color-medium), var(--ion-color-light))
+//     }
+
+//     .bg-profile {
+//         // background-image: linear-gradient(135deg, #dad9f1, #144634);
+//         background-image: linear-gradient(#dad9f1) ;
+//     }
+// }
+
 :host {
     ion-content {
-        --background: linear-gradient(-135deg, var(--ion-color-medium), var(--ion-color-light))
+      // --background: linear-gradient(-135deg, var(--ion-color-medium), var(--ion-color-light));
+      --background: white;
     }
 
     .bg-profile {
-        // background-image: linear-gradient(135deg, #dad9f1, #144634);
-        background-image: linear-gradient(#dad9f1) ;
+        background-image: linear-gradient(135deg, #f7f7fa, #f7f7fa);
+    }
+
+    .card-content-md p {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 2px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+        padding: 10px;
+        color: black
+      
+    }
+
+    .card-content-ios p {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 2px;
+        font-size: 14px;
+        padding: 10px;
+        color: black
     }
 }
