@@ -19,7 +19,7 @@
            
             Name
           </ion-label>
-          <ion-input color="secondary" type="text" formControlName="name"></ion-input>
+          <ion-input color="primary" type="text" formControlName="name"></ion-input>
         </ion-item>
         <p ion-text class="text08"
           *ngIf="contactForm.get('name').touched && contactForm.get('name').hasError('required')">
@@ -33,7 +33,7 @@
            
               Email
             </ion-label>
-            <ion-input color="secondary" type="email" formControlName="email"></ion-input>
+            <ion-input color="primary" type="email" formControlName="email"></ion-input>
           </ion-item>
           <span class="help-block"
             *ngIf="contactForm.get('email').errors && (contactForm.get('email').touched || contactForm.get('email').dirty)">
@@ -50,7 +50,7 @@
                
               Subject
               </ion-label>
-              <ion-input color="secondary" type="text" formControlName="subject"></ion-input>
+              <ion-input color="primary" type="text" formControlName="subject"></ion-input>
             </ion-item>
             <p ion-text class="text08"
               *ngIf="contactForm.get('subject').touched && contactForm.get('subject').hasError('required')">
@@ -64,7 +64,7 @@
                 
              You Message
                 </ion-label>
-                <ion-textarea color="secondary" type="textarea" formControlName="msg"></ion-textarea>
+                <ion-textarea color="primary" type="textarea" formControlName="msg"></ion-textarea>
               </ion-item>
               <p ion-text class="text08"
                 *ngIf="contactForm.get('msg').touched && contactForm.get('msg').hasError('required')">
